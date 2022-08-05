@@ -36,15 +36,13 @@ $comando = $con->prepare($sql);
 // executa o ca
 $comando->execute();
 
-// 
+// exibe msg de sucesso ao inserir
 echo "cadastrado com sucesso!";
 
 
-
+// fechar a conexão
+$con = null;
 
 }catch(PDOException $erro){
 
 }
-
-
-?>
