@@ -33,7 +33,7 @@ try{
  // Prepara a execucão da query SQL acima
 $comando = $con->prepare($sql);
 
-// executa o ca
+// executa o comando com a query no banco de dados 
 $comando->execute();
 
 // exibe msg de sucesso ao inserir
@@ -44,5 +44,10 @@ echo "cadastrado com sucesso!";
 $con = null;
 
 }catch(PDOException $erro){
+    echo $erro->getMessage();
+    // mata o arquivo 
+    die();
 
 }
+
+?>

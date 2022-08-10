@@ -15,27 +15,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para db_turismo
-CREATE DATABASE IF NOT EXISTS `db_turismo` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `db_turismo`;
+-- Copiando estrutura do banco de dados para db_restaurante
+CREATE DATABASE IF NOT EXISTS `db_restaurante` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `db_restaurante`;
 
--- Copiando estrutura para tabela db_turismo.tb_viagens
-CREATE TABLE IF NOT EXISTS `tb_viagens` (
+-- Copiando estrutura para tabela db_restaurante.tb_pratos
+CREATE TABLE IF NOT EXISTS `tb_pratos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Titulo` varchar(50) NOT NULL,
-  `Local` varchar(50) NOT NULL,
-  `Valor` float(7,2) NOT NULL,
-  `Desc` varchar(200) DEFAULT NULL,
-  `ativo` bit(1) NOT NULL DEFAULT b'1',
-  `data_cadastro` datetime NOT NULL DEFAULT current_timestamp(),
+  `codigo` varchar(50) NOT NULL,
+  `nome` varchar(80) NOT NULL,
+  `categoria` varchar(50) NOT NULL,
+  `descricao` varchar(150) NOT NULL,
+  `preco` float(6,2) NOT NULL,
+  `calorias` int(11) NOT NULL,
+  `destaque` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela db_turismo.tb_viagens: ~2 rows (aproximadamente)
-INSERT INTO `tb_viagens` (`id`, `Titulo`, `Local`, `Valor`, `Desc`, `ativo`, `data_cadastro`) VALUES
-	(1, 'Pacote de inverno', 'Gramado', 1700.00, '5 dias de Hotel com café da manhã', b'1', '2022-08-02 19:49:06'),
-	(2, 'PRaia com a familia', 'Rio de Janeiro', 5000.00, '6 dias de Hotel com café da manhã', b'1', '2022-08-02 19:52:40'),
-	(3, 'Curta aproveite as montanhas ', 'Monte Verde', 1400.00, '3 dias no chalé nas montanhas de Minas Gerais', b'1', '2022-08-02 22:26:32');
+-- Copiando dados para a tabela db_restaurante.tb_pratos: ~3 rows (aproximadamente)
+INSERT INTO `tb_pratos` (`id`, `codigo`, `nome`, `categoria`, `descricao`, `preco`, `calorias`, `destaque`) VALUES
+	(2, '540', 'Lasanha', 'prato-principal', 'Lasanha deliciosa', 50.00, 449, 1),
+	(7, 'brie-geleia', 'brie-geleia', 'entrada', '1', 100.00, 8, 1),
+	(8, 'petit-gateau', 'petit-gateau', 'entrada', '1', 30.00, 3, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
