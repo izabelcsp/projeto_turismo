@@ -6,7 +6,7 @@ try{
 
     $sql =  "SELECT * FROM tb_viagens";
 
-    $comando = $conn->prepare($sql);
+    $comando = $con->prepare($sql);
 
     $comando->execute();
 

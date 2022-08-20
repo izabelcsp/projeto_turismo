@@ -23,7 +23,7 @@ try{
         id = $id;
     ";
 
-     $comando = $conn->prepare($sql);
+     $comando = $con->prepare($sql);
 
      $comando -> execute();
  

@@ -9,7 +9,7 @@ try{
     $sql = "SELECT * FROM tb_login WHERE usuario='$usuario' AND BINARY senha='$senha' AND ativo = 1 ";
     // binary, diferencia caracteres
 
-    $comando = $conn->prepare($sql);
+    $comando = $con->prepare($sql);
     $comando->execute();
     $dados = $comando->fetchAll(PDO::FETCH_ASSOC);
 

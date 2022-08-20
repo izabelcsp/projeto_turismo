@@ -75,7 +75,7 @@ try{
                     
     // prepara a execução da query SQL acima
      
-    $comando = $conn ->prepare($sql);
+    $comando = $con ->prepare($sql);
 
     // executa o comando com a query no banco de dados
 

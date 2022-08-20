@@ -9,7 +9,7 @@ try{
     // comando SQL que irá selecionar as viagens por id 
     $sql = "SELECT * FROM tb_viagens WHERE id = $id";
 
-    $comando = $conn->prepare($sql);
+    $comando = $con->prepare($sql);
 
     $comando -> execute();
 

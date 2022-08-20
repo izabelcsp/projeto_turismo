@@ -7,7 +7,7 @@ try{
 
     $sql = "DELETE FROM tb_viagens WHERE id=$id";
 
-    $comando=$conn->prepare($sql);
+    $comando=$con->prepare($sql);
 
     $comando->execute();
 
