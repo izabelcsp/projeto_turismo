@@ -42,6 +42,11 @@ try {
 </head>
 
 <body>
+
+        <hr>
+        <button><a href="admin/index.html">Sair</a></button>
+        <hr>
+
     <div id="container">
         <h3>Lista de Viagens</h3>
         <div id="grid-viagens">

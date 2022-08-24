@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,17 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Cadastro de Viagens</title>
 </head>
+
 <body>
     <div id="container">
         <h3>Cadastro de Viagens</h3>
+
+        <hr>
+        <button><a href="../listar_viagens.php">Listar Viages</a></button>
+        <button><a href="gerenciar_viagens.php">Gerenciar</a></button>
+        <button><a href="index.html">Sair</a></button>
+        <hr>
+
         <form action="../backend/_cadastrar_viagens.php" method="post" enctype="multipart/form-data">
             <div>
                 <label for="titulo">Título</label>
@@ -35,6 +44,7 @@
             <input type="submit" value="Cadastrar">
         </form>
     </div>
-    
+
 </body>
+
 </html>

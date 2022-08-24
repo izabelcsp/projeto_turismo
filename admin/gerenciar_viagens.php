@@ -36,6 +36,13 @@ try{
 <body>
 <div id="container">
         <h3>Gerenciar Viagens</h3>
+
+        <hr>
+        <button><a href="cadastrar_viagens.html">Cadastrar Viages</a></button>
+        <button><a href="index.html">Sair</a></button>
+        <hr>
+
+
         <div id="tabela">
             <table border ="1">
                 <tr>

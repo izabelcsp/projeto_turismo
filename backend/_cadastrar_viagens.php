@@ -19,6 +19,7 @@ try{
 
     // /////////////////////////////////////////////
 
+    // inicio do opload!!!!
     // upload da imagem
     // armasena o nome original da imagem
     $nome_original_imagem = $_FILES['imagem']['name'];
@@ -42,16 +43,15 @@ try{
     // juntamos o hash mais a extensão para ter o nome final da imagem.
     $nome_final_imagem = $hash.'.'.$extensao;
 
-    echo $hash;
 
     // onde será colocada a img
     $pasta = '../img/upload/';
 
-    // define o novo nome da imagem para upload
-    $nome_img = 'img.jpg';
+    // // define o novo nome da imagem para upload
+    // $nome_img = 'img.jpg';
 
     move_uploaded_file($_FILES['imagem']['tmp_name'],$pasta.$nome_final_imagem);
-
+    // final do upload
 
     // variavel que recebe a query SQL que sera executada no BD
     $sql = "INSERT INTO

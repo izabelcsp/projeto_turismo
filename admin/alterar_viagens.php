@@ -45,7 +45,7 @@ try{
 <body>
     <div id="container">
         <h3>Alterar Viagens</h3>
-        <form action="../backend/_alterar_viagens.php" method="post">
+        <form action="../backend/_alterar_viagens.php" method="post" enctype="multipart/form-data">
 
             <div id="grid_alterar">
                 <div>
@@ -64,6 +64,11 @@ try{
                     <label for="valor">Valor</label>
                     <input type="text" name="valor" id="valor" value="<?php echo $dados[0]['Valor'];?>">
                 </div>
+                <div>
+                    <label for="imagem">Alterar Imagem</label>
+                    <input type="file" name="imagem" id="imagem" Value="">
+                </div>
+                <img class="img_alterar" src="../img/upload/<?php echo $dados[0]['imagem']; ?>" alt="">
                 <div>
                     <label for="desc">Descrição</label>
                     <textarea name="desc" id="desc" cols="30" rows="10"><?php echo $dados[0]['Desc'];?></textarea>
