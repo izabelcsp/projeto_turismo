@@ -19,8 +19,18 @@ try{
 
     // if($dados == null) verificar se dados é nulo
     if($dados != null){ 
-    // verificar se dados é diferente de nulo
-    header('location:../admin/gerenciar_viagens.php');
+
+        // Inicia a sessão 
+        session_start();
+
+        // Cria uma variável de sessão e adiciona o usuario digitado 
+        $_SESSION['usuario'] = $usuario;
+
+        // exibe o valor adicionado na variavel de sessão usuario
+        var_dump($_SESSION['usuario']);
+
+        // verificar se dados é diferente de nulo
+        header('location:../admin/gerenciar_viagens.php');
 }else{
     // se o usuario ou senha sao invalidos, irá entrar nesse bloco de código
     echo "Usuário ou senha invalidos";
