@@ -1,8 +1,12 @@
 <?php
+    // include do controle de sessão
+    include '../backend/controle_sessao.php';
 
-include'../backend/conexao.php';
+    // include conexão 
+    include '../backend/conexao.php';
 
-try{
+
+try {
 
     $sql =  "SELECT * FROM tb_viagens";
 
@@ -15,9 +19,8 @@ try{
     // echo"<pre>";
     // var_dump($dados);
     // echo"</pre>";
-    
-}catch(PDOException $erro){
-    
+
+} catch (PDOException $erro) {
 };
 
 ?>
@@ -26,6 +29,7 @@ try{
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,18 +37,19 @@ try{
     <link rel="stylesheet" href="../css/style.css">
     <title>Gerenciar viagens</title>
 </head>
+
 <body>
-<div id="container">
+    <div id="container">
         <h3>Gerenciar Viagens</h3>
 
         <hr>
-        <button><a href="cadastrar_viagens.html">Cadastrar Viages</a></button>
-        <button><a href="index.html">Sair</a></button>
+        <button><a href="cadastrar_viagens.php">Cadastrar Viages</a></button>
+        <button><a href="../backend/logout.php">Sair</a></button>
         <hr>
 
 
         <div id="tabela">
-            <table border ="1">
+            <table border="1">
                 <tr>
                     <th>ID</th>
                     <th>Título</th>
@@ -56,30 +61,31 @@ try{
                 </tr>
 
                 <?php
-                    foreach($dados as $viagem):
+                foreach ($dados as $viagem) :
                 ?>
 
-                <tr>
-                    <td><?php echo $viagem['id']?></td>
-                    <td><?php echo $viagem['Titulo']?></td>
-                    <td><?php echo $viagem['Local']?></td>
-                    <td>R$<?php echo $viagem['Valor']?></td>
-                    <td><?php echo $viagem['Desc']?></td>
-                    <td>
-                        <a href="alterar_viagens.php?id=<?php echo $viagem['id']?>">Alterar</a>
-                    </td>
-                    <td>
-                        <a href="../backend/deletar_viagens.php?id=<?php echo $viagem['id']?>">Deletar</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?php echo $viagem['id'] ?></td>
+                        <td><?php echo $viagem['Titulo'] ?></td>
+                        <td><?php echo $viagem['Local'] ?></td>
+                        <td>R$<?php echo $viagem['Valor'] ?></td>
+                        <td><?php echo $viagem['Desc'] ?></td>
+                        <td>
+                            <a href="alterar_viagens.php?id=<?php echo $viagem['id'] ?>">Alterar</a>
+                        </td>
+                        <td>
+                            <a href="../backend/deletar_viagens.php?id=<?php echo $viagem['id'] ?>">Deletar</a>
+                        </td>
+                    </tr>
 
                 <?php
-                    endforeach
+                endforeach
                 ?>
 
             </table>
         </div>
     </div>
-    
+
 </body>
+
 </html>

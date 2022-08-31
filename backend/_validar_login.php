@@ -22,12 +22,14 @@ try{
 
         // Inicia a sessão 
         session_start();
+        // para ver o id da cessão var_dump(session_id());
 
         // Cria uma variável de sessão e adiciona o usuario digitado 
         $_SESSION['usuario'] = $usuario;
 
         // exibe o valor adicionado na variavel de sessão usuario
-        var_dump($_SESSION['usuario']);
+        // var_dump($_SESSION['usuario']);
+        // exit;
 
         // verificar se dados é diferente de nulo
         header('location:../admin/gerenciar_viagens.php');

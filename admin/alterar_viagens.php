@@ -1,4 +1,8 @@
 <?php 
+// include do controle de sessão
+include '../backend/controle_sessao.php';
+
+
 // include da coneção
 include'../backend/conexao.php';
 

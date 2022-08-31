@@ -1,3 +1,9 @@
+<?php
+// include do controle de sessão
+include '../backend/controle_sessao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +22,7 @@
         <hr>
         <button><a href="../listar_viagens.php">Listar Viages</a></button>
         <button><a href="gerenciar_viagens.php">Gerenciar</a></button>
-        <button><a href="index.html">Sair</a></button>
+        <button><a href="../backend/logout.php">Sair</a></button>
         <hr>
 
         <form action="../backend/_cadastrar_viagens.php" method="post" enctype="multipart/form-data">
