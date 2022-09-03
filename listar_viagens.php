@@ -44,7 +44,7 @@ try {
 <body>
 
         <hr>
-        <button><a href="admin/index.html">Sair</a></button>
+        <button><a href="admin/index.php">Sair</a></button>
         <hr>
 
     <div id="container">

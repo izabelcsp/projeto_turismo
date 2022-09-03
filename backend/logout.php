@@ -5,6 +5,6 @@
 
     session_destroy();
 
-    header('location: ../admin/index.html');
+    header('location: ../admin/index.php');
     
 ?>
