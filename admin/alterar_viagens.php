@@ -73,6 +73,7 @@ try{
                     <input type="file" name="imagem" id="imagem" Value="">
                 </div>
                 <img class="img_alterar" src="../img/upload/<?php echo $dados[0]['imagem']; ?>" alt="">
+                
                 <div>
                     <label for="desc">Descrição</label>
                     <textarea name="desc" id="desc" cols="30" rows="10"><?php echo $dados[0]['Desc'];?></textarea>

@@ -74,17 +74,16 @@ try{
             ";
                     
     // prepara a execução da query SQL acima
-     
     $comando = $con ->prepare($sql);
 
     // executa o comando com a query no banco de dados
-
     $comando->execute();
 
-    // 
-
+    // mostra mensagem de sucesso na tela 
     echo "Cadastro realizado com sucesso";
 
+    // fechar e conexão 
+    $con = null; 
 
 
 }catch(PDOException $erro){

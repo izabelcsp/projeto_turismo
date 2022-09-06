@@ -55,6 +55,7 @@ try {
             ?>
                 <figure class="figure-viagens">
                     <img class="img-viagens" src="img/upload/<?php echo $d['imagem']?>" alt="imagem da viagem ">
+                    
                     <figcaption class="figcaption-viagens">
                         <h4><?php echo $d['Titulo']; ?></h4>
                         <h5><?php echo $d['Local']; ?></h5>
