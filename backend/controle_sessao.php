@@ -10,7 +10,7 @@
 
     // se o usuario não estiver logado, redirecionado para a tela de login
     if($usuario == null){
-        header('location: index.php');
+        header('location: ../admin/index.php');
         exit;
     }
 ?>
